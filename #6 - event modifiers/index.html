@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <title>Vue Tutorials</title>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h1>Event Modifiers</h1>
+      <!-- once modifier. Only execute the event once -->
+      <button @click.once="add(1)">Add a Year</button>
+      <button @click="subtract(1)">Subtract a Year</button>
+      <button @dblclick="add(10)">Add 10 Years</button>
+      <button @dblclick="subtract(10)">Subtract 10 Years</button>
+      <p>My age: {{age}}</p>
+
+      <div id="canvas" v-on:mousemove="updateXY">{{x}}, {{y}}</div>
+      <!-- prevent modifier. Prevent a default behavior i.e. going to an external website -->
+      <a @click.prevent="click" href="http://www.thenetninja.co.uk"
+        >The Net Ninja</a
+      >
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

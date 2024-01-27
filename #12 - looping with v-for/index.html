@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <title>Vue Tutorials</title>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h1>Looping through an array of strings</h1>
+      <ul>
+        <li v-for="(character, index) in characters">
+          {{index}}. {{character}}
+        </li>
+      </ul>
+
+      <h1>Looping through an array of objects</h1>
+      <ul>
+        <li v-for="(ninja,index) in ninjas">
+          {{index}}. {{ninja.name}} - {{ninja.age}}
+        </li>
+      </ul>
+
+      <!-- template element will only display the h3 & p -->
+      <template v-for="ninja in ninjas">
+        <h3>{{index}}. {{ninja.name}}</h3>
+        <p>{{ninja.age}}</p>
+      </template>
+
+      <template v-for="ninja in ninjas">
+        <div v-for="(value, key) in ninja">
+          <p>{{key}} - {{value}}</p>
+        </div>
+      </template>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <link href="styles.css" rel="stylesheet"/>
+  <title>Vue Tutorials</title>
+</head>
+<body>
+  <div id="vue-app">
+    <h1>Data Binding</h1>
+    <!-- bind the href attribute to a dynamic data on vue instance -->
+   <a v-bind:href="website">The Net Ninja</a>
+   <input type="text" :value="name"/>
+   <!-- another alternative is using v-html -->
+   <p v-html="websiteTag"></p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
